@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'bundle install'
                 sh 'bundle exec jekyll build'
             }
         }
