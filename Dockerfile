@@ -6,6 +6,8 @@ RUN echo 'root:root' | chpasswd && \
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \
+    openssh-client \
+    rsync \
     ruby-dev
 
 USER dev
