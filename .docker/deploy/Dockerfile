@@ -5,11 +5,8 @@ RUN echo 'root:root' | chpasswd && \
     && useradd -m -u 1000 -g dev dev
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    build-essential \
-    ruby-dev
+    openssh-server \
+    rsync
 
 USER dev
 WORKDIR /ws
-ENV GEM_HOME /home/dev/.gem
-ENV PATH $GEM_HOME/bin:$PATH
-RUN gem install bundler jekyll
