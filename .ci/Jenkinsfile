@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             agent {
                 dockerfile {
+                    filename '.ci/Dockerfile'
                     args '-v ${WORKSPACE}:/ws'
                 }
             }
@@ -15,7 +16,7 @@ pipeline {
         stage('Deploy') {
             agent {
                 dockerfile {
-                    filename '.docker/deploy/Dockerfile'
+                    filename '.ci/Dockerfile.deploy'
                     args '-v ${WORKSPACE}:/ws'
                 }
             }
