@@ -27,6 +27,7 @@ I've attempted to provide enough information to verify any parts you order are s
 * [crimpers](https://www.amazon.com/gp/product/B07GFXHH91)
 * [spade terminals](https://www.amazon.com/gp/product/B07KYMNZMX)
 * [fork terminals](https://www.amazon.com/gp/product/B08B5WHTHW)
+* [piggyback spade terminals](https://www.amazon.com/gp/product/B08DCRRL2J)
 * raspberry pi zero w and SD card
 * [raspbery pi terminal hat](https://www.amazon.com/gp/product/B09MFB6PJH)
 * [power supply, 120V AC to 5V 3A DC](https://www.amazon.com/gp/product/B07FMZ3Z2K)
@@ -82,9 +83,13 @@ I didn't bother with new thermal paste on the thermocouple, in part because I wa
 
 ## Connect the power supply
 
+![image](https://s3.hepp.cloud/public/ahepp/blog/assets/2023/03/gaggia_modified_power_switch.jpeg){: width="350"}
+
 * Cut two 12" 14 gauge wires
-* Terminate one end of each wire with an insulated female spade connector
-* (1, internal) Connect the female spades to the main power switch
+* Terminate one end of each wire with a piggyback spade connector
+* (1, internal) Remove the female spades from the bottom terminals on the main power switch
+* Connect the female spades to the piggyback spades
+* Connect the piggyback spades to the bottom terminals of the main power switch
 * (1, external) Connect the wires to the power supply input
 * Cut two 6" 22 gauge wires
 * (2, external) Connect the power supply output to the Pi 5v and ground
